@@ -1,5 +1,6 @@
 const express=require('express');
 const PORT=3000;
+const studentRouter=require('./routes/student');
 
 const app=express();
 
@@ -8,6 +9,9 @@ app.use(express.json());
 app.get('/',function(request,response){
     response.send("Peppi esimerkki");
 });
+
+app.use('/student',studentRouter);
+
 
 app.listen(PORT,function(){
     console.log("Palvelin kuuntelee porttia:"+PORT);
