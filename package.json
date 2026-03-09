@@ -1,0 +1,27 @@
+{
+  "name": "group_x",
+  "version": "1.0.0",
+  "description": "",
+  "homepage": "https://github.com/tvt25spo-bank/group_x#readme",
+  "bugs": {
+    "url": "https://github.com/tvt25spo-bank/group_x/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tvt25spo-bank/group_x.git"
+  },
+  "license": "ISC",
+  "author": "group_x",
+  "type": "commonjs",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "bcryptjs": "^3.0.3",
+    "dotenv": "^17.3.1",
+    "express": "^5.2.1",
+    "jsonwebtoken": "^9.0.3",
+    "mysql2": "^3.19.0"
+  }
+}
