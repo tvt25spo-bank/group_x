@@ -1,12 +1,12 @@
 const express=require('express');
-const dotenv=require('dotenv');
+//const dotenv=require('dotenv');
 const jwt=require('jsonwebtoken');
 const bcrypt=require('bcryptjs');
 const router=express.Router();
 const student=require('../models/student_model');
 
-
-dotenv.config();
+//seuraava on jo app.js tiedostossa
+//dotenv.config();
 
 router.post('/', function(request, response){
 if(request.body.username && request.body.password){

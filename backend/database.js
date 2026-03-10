@@ -1,6 +1,9 @@
 const mysql=require('mysql2');
-const connectionString='mysql://peppiuser:peppipass@127.0.0.1/bank_db';
+const dotenv=require('dotenv');
 
-const connection=mysql.createPool(connectionString);
+dotenv.config();
+
+const connection=mysql.createPool(process.env.SQL_SERVER);
+
 
 module.exports=connection;
