@@ -9,6 +9,7 @@ const student=require('../models/student_model');
 //dotenv.config();
 
 router.post('/', function(request, response){
+    console.log(request.body);
 if(request.body.username && request.body.password){
     const username=request.body.username;
     const password=request.body.password;
