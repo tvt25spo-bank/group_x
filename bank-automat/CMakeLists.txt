@@ -11,6 +11,7 @@ qt_add_executable(bank-automat
     mainwindow.cpp
     mainwindow.h
     mainwindow.ui
+    environment.h environment.cpp
 )
 
 target_link_libraries(bank-automat

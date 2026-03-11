@@ -8,6 +8,7 @@
 #include <QJsonDocument>
 #include <QJsonObject>
 #include <QJsonArray>
+#include "environment.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui {

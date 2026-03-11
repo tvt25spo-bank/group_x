@@ -19,7 +19,7 @@ void MainWindow::loginSlot()
 {
     QString username=ui->textUsername->text();
     QString password=ui->textPassword->text();
-    QString url="http://localhost:3000/login";
+    QString url=Environment::GetBaseUrl()+"/login";
     QNetworkRequest request(url);request.setHeader(QNetworkRequest::ContentTypeHeader, "application/json");
     QJsonObject loginData;
     loginData.insert("username",username);
