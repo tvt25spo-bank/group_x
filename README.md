@@ -15,6 +15,8 @@ Tiedoston style.qss avulla voit muokata eri kontrollerien (buttonit, line-edit j
 
 Jos haluat käyttää style tiedostoa omassa sovelluksessa sinun tulee luoda style.qss tiedoston lisäksi resource-tiedosto ja muokata main.cpp ja lisätä CMakeLists.txt tiedostoon rivit:
 
+ ```
 qt_add_resources(RESOURCES_ADDED resource.qrc)
 target_sources(bank-automat PRIVATE ${RESOURCES_ADDED})
+ ```
 
