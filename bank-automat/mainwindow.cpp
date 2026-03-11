@@ -1,4 +1,5 @@
 #include "mainwindow.h"
+#include "studentinfo.h"
 #include "ui_mainwindow.h"
 
 MainWindow::MainWindow(QWidget *parent)
@@ -27,7 +28,7 @@ void MainWindow::loginSlot()
     QJsonDocument jsonDoc(loginData);
     QNetworkReply *reply=manager->post(request,jsonDoc.toJson());
 
-    connect(reply, &QNetworkReply::finished, this,[reply, this](){
+    connect(reply, &QNetworkReply::finished, this,[reply,username, this](){
         QByteArray response_data=reply->readAll();
         int status = reply->attribute(QNetworkRequest::HttpStatusCodeAttribute).toInt();
         qDebug()<<"koodi="<<status;
@@ -38,7 +39,13 @@ void MainWindow::loginSlot()
             ui->labelInfo->setText("Tunnus ja salasana eivät täsmää");
         }
         else{
-           ui->labelInfo->setText("OK");
+            StudentInfo *objStudentInfo=new StudentInfo(this);
+            objStudentInfo->setUsername(username);
+            QJsonDocument jDoc=QJsonDocument::fromJson(response_data);
+            QJsonObject json_obj = jDoc.object();
+            QByteArray token="Bearer "+json_obj["token"].toString().toUtf8();
+            objStudentInfo->setToken(token);
+            objStudentInfo->show();
         }
 
         reply->deleteLater();
