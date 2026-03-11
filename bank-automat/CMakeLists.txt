@@ -5,6 +5,7 @@ find_package(Qt6 6.5 REQUIRED COMPONENTS Core Widgets Network)
 
 qt_standard_project_setup()
 
+
 qt_add_executable(bank-automat
     WIN32 MACOSX_BUNDLE
     main.cpp
@@ -12,7 +13,13 @@ qt_add_executable(bank-automat
     mainwindow.h
     mainwindow.ui
     environment.h environment.cpp
+    studentinfo.h studentinfo.cpp studentinfo.ui
+    studentdata.h studentdata.cpp studentdata.ui
+    style.qss
 )
+
+qt_add_resources(RESOURCES_ADDED resource.qrc)
+target_sources(bank-automat PRIVATE ${RESOURCES_ADDED})
 
 target_link_libraries(bank-automat
     PRIVATE
