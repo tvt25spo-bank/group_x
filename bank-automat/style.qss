@@ -2,4 +2,10 @@ QPushButton{
     background-color:lightblue;
     border: 2px solid gray;
     border-radius:10px;
+    min-width:100px;
+}
+
+QLineEdit{
+    border: 2px solid gray;
+    border-radius:10px;
 }
