@@ -2,6 +2,13 @@
 #define STUDENTINFO_H
 
 #include <QDialog>
+#include <QNetworkAccessManager>
+#include <QNetworkReply>
+#include <QNetworkRequest>
+#include <QJsonDocument>
+#include <QJsonObject>
+#include <QJsonArray>
+#include "studentdata.h"
 
 namespace Ui {
 class StudentInfo;
@@ -23,6 +30,10 @@ private:
     Ui::StudentInfo *ui;
     QString username;
     QByteArray token;
+    QNetworkAccessManager *manager;
+
+private slots:
+    void btnStudentDataSlot();
 };
 
 #endif // STUDENTINFO_H
