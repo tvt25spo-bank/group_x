@@ -34,6 +34,7 @@ private:
 
 private slots:
     void btnStudentDataSlot();
+    void btnStudentGradeSlot();
 };
 
 #endif // STUDENTINFO_H

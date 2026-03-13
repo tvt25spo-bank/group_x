@@ -16,6 +16,8 @@ qt_add_executable(bank-automat
     studentinfo.h studentinfo.cpp studentinfo.ui
     studentdata.h studentdata.cpp studentdata.ui
     style.qss
+    grades.h grades.cpp grades.ui
+    grade.h grade.cpp
 )
 
 qt_add_resources(RESOURCES_ADDED resource.qrc)
