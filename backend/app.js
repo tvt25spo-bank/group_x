@@ -2,6 +2,7 @@ const express=require('express');
 const PORT=3000;
 const studentRouter=require('./routes/student');
 const loginRouter=require('./routes/login');
+const gradeRouter=require('./routes/grade');
 const jwt=require('jsonwebtoken');
 const dotenv=require('dotenv');
 
@@ -18,6 +19,7 @@ app.use('/login',loginRouter);
 //suojatut endpointit
 app.use(authenticateToken);
 app.use('/student',studentRouter);
+app.use('/grade',gradeRouter);
 
 
 app.listen(PORT,function(){
