@@ -14,6 +14,7 @@ class StudentData : public QDialog
 public:
     explicit StudentData(QWidget *parent = nullptr);
     ~StudentData();
+    void SetData(QString, QString, QString, QString);
 
 private:
     Ui::StudentData *ui;
