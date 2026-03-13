@@ -20,3 +20,20 @@ qt_add_resources(RESOURCES_ADDED resource.qrc)
 target_sources(bank-automat PRIVATE ${RESOURCES_ADDED})
  ```
 
+Tässä esimerkissä tuon resource.qrc tiedoston sisätö on seuraava:
+ ```
+<RCC>
+    <qresource prefix="/">
+        <file>style.qss</file>
+    </qresource>
+</RCC>
+ ```
+Ja style.qss tiedostoon voi sitten lisätä tyylejä kuten tässä esimerkissä:
+ ```
+QPushButton{
+    background-color:lightblue;
+    border: 2px solid gray;
+    border-radius:10px;
+}
+ ```
+
