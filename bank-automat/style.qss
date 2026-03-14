@@ -2,10 +2,17 @@ QPushButton{
     background-color:lightblue;
     border: 2px solid gray;
     border-radius:10px;
-    min-width:100px;
+    min-width:160px;
+    font-size:20px;
 }
 
 QLineEdit{
     border: 2px solid gray;
     border-radius:10px;
+    min-width:160px;
+    font-size:20px;
+}
+QLabel{
+    font-size:20px;
+    min-width:160px;
 }
